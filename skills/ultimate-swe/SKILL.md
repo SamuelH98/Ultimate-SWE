@@ -20,7 +20,9 @@ Work through these steps in order. Each step has a dedicated workflow file — r
 1. **Requirements Gathering** → `workflows/requirements.md`
 2. **Research** → `workflows/research.md`
 3. **Architecture Design** → `workflows/architecture.md`
-4. **Implementation** → `workflows/implementation.md`
+4. **Implementation** → for each new feature:
+   - 🔄 **Re-run Research** → `workflows/research.md` *(re-research before each new feature)*
+   - Then proceed → `workflows/implementation.md`
 5. **Testing** → `workflows/testing.md`
 6. **Validation** → `workflows/validation.md`
 7. **Session Handoff** → `workflows/handoff.md`
