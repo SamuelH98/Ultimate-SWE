@@ -8,7 +8,7 @@ Build features incrementally with correctness and structure.
 
 ## Key Activities
 
-- Implement one feature at a time
+- Implement one feature at a time, then test and compare to reference
 - Follow architecture strictly
 - Write code alongside tests
 - Keep changes small and reviewable

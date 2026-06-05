@@ -8,6 +8,7 @@ Understand technologies, tools, and domain context before making decisions.
 
 ## Key Activities
 
+- Search the web to learn tools, APIs, and find reference images (e.g. curl examples)
 - Review official documentation
 - Study APIs and frameworks
 - Compare libraries and tools
