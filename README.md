@@ -25,30 +25,6 @@
 npx skills add https://github.com/SamuelH98/Ultimate-SWE --skill ultimate-swe
 ```
 
-**Global install (available in every project)**
-
-```bash
-git clone https://github.com/SamuelH98/Ultimate-SWE.git /tmp/ultimate-swe
-mkdir -p ~/.config/opencode/skills
-cp -r /tmp/ultimate-swe/skills/ultimate-swe ~/.config/opencode/skills/ultimate-swe
-```
-
-**Project-level install (current project only)**
-
-```bash
-mkdir -p .opencode/skills
-cp -r /tmp/ultimate-swe/skills/ultimate-swe .opencode/skills/ultimate-swe
-```
-
-**Stay up to date with a symlink**
-
-```bash
-git clone https://github.com/SamuelH98/Ultimate-SWE.git ~/ultimate-swe
-ln -s ~/ultimate-swe/skills/ultimate-swe ~/.config/opencode/skills/ultimate-swe
-```
-
-Restart opencode after installing, then verify with: `what skills do you have`
-
 ---
 
 ## ⚡ What is Ultimate SWE?

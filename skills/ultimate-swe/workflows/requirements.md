@@ -29,3 +29,4 @@ Fully understand the problem before any design or implementation begins.
 ## Rule
 
 Never assume requirements. If unclear, ask questions before proceeding.
+Minimum to proceed: functional requirements defined, acceptance criteria measurable, scope boundaries confirmed.
