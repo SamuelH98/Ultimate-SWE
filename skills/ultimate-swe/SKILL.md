@@ -1,7 +1,18 @@
 ---
 name: ultimate-swe
-description: Use this skill for non-trivial software engineering tasks requiring design decisions, multi-file changes, or new features. Do NOT use for single-line fixes, simple refactors, or isolated bug patches — building features, designing systems, debugging, refactoring, or writing tests. Enforces a structured workflow covering requirements gathering, research, architecture, implementation, testing, validation, and session handoff. Prioritizes correctness over speed, evidence over assumptions, and always uses Git. Trigger for any non-trivial coding or system design request.
+description: "Use this skill whenever the user asks to build a feature, design or architect a system, implement a non-trivial piece of software, debug a multi-component issue, refactor more than a single file, or write production-quality code with tests. Make sure to trigger this for requests like \"build me an X\", \"add a Y feature\", \"design a system for Z\", \"refactor this module\", or \"write tests for this\" — even if the user doesn't explicitly ask for a \"workflow\" or \"process\". Enforces a structured, disciplined workflow covering requirements gathering, research, architecture, implementation, testing, validation, and session handoff. Prioritizes correctness over speed, evidence over assumptions, and Git-based development. Do NOT use for single-line fixes, isolated typo/bug patches, config tweaks, or simple one-step refactors confined to one file — see \"Scope Check\" below for the gray zone."
+compatibility: Requires shell/file-system access and Git for version control. Not suited to read-only or chat-only contexts where code cannot actually be written or committed.
 ---
+
+## Scope Check (read this first)
+
+Before starting the full workflow, classify the task:
+
+- **Trivial** (single-line fix, typo, config value, isolated one-file patch): skip this skill entirely — just make the change.
+- **Small but multi-file** (e.g., a bug fix touching 2-4 files, a small refactor with no new architecture): run a *lightweight* pass — confirm the fix with the user if ambiguous, write/update tests for the change, commit with a clear message. Skip Architecture and Handoff unless the change reveals a design problem.
+- **Non-trivial** (new feature, new system, multi-step design decision, anything where "how should this work" isn't obvious): run the full workflow below, in order.
+
+When in doubt, ask the user, or default to the lightweight pass — the goal is rigor proportional to risk, not ceremony for its own sake.
 
 ## Core Principles
 

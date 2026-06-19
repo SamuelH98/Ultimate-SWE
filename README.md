@@ -68,15 +68,14 @@ Ship
 
 | Phase            | Purpose                      |
 | ---------------- | ---------------------------- |
+| Scope Check      | Match rigor to task risk     |
 | Requirements     | Eliminate ambiguity          |
 | Research         | Understand technologies      |
-| Tool Evaluation  | Choose the correct solution  |
 | Architecture     | Design before coding         |
 | Implementation   | Build one feature at a time  |
 | Testing          | Verify correctness           |
-| Validation       | Compare against requirements |
 | Code Review      | Improve maintainability      |
-| Confidence Check | Verify completion            |
+| Validation       | Compare against requirements |
 | Handoff          | Preserve project state       |
 
 ---
@@ -84,7 +83,7 @@ Ship
 ## 📂 Repository Layout
 
 ```text
-ultimate-swe/
+skills/ultimate-swe/
 ├── SKILL.md
 ├── workflows/
 └── templates/
