@@ -21,8 +21,10 @@ When in doubt, ask the user, or default to the lightweight pass — the goal is 
 - Architecture before implementation
 - Testing as a requirement, not an option
 - Git-based development for all work — no untracked experimental code
+- Search before guessing — verify against current, live sources rather than memory alone
+- Two failed attempts at the same problem is a signal to stop and change approach, not a reason to try a third guess
 
-Never skip requirements gathering. Never implement without understanding. Never trust unverified assumptions. Always design before coding. Always test before marking complete.
+Never skip requirements gathering. Never implement without understanding. Never trust unverified assumptions. Always design before coding. Always test before marking complete. Never repeat the same failing approach a third time — see the Escalation Protocol below.
 
 ## Workflow
 
@@ -32,15 +34,28 @@ Work through these steps in order. Each step has a dedicated workflow file — r
 2. **Research** → `workflows/research.md`
 3. **Architecture Design** → `workflows/architecture.md`
 4. **Implementation** → for each new feature:
-   - 🔄 **Re-run Research** → `workflows/research.md` *(skip if feature uses only already-researched tech)*
+   - 🔄 **Re-run Research** → `workflows/research.md` *(skip only if the feature uses solely already-researched tech; any new library, API, or unfamiliar error goes back through Research first)*
    - Then proceed → `workflows/implementation.md`
+   - 🚧 **Stuck on the same problem twice?** → stop implementing and follow `workflows/troubleshooting.md` before attempting a third fix
 5. **Testing** → `workflows/testing.md`
 6. **Code Review** → review for readability, SOLID adherence, and edge cases before merging
 7. **Validation** → `workflows/validation.md`
-8. **Session Handoff** → `workflows/handoff.md`
+8. **Deployment / Release** → `workflows/deployment.md`
+9. **Session Handoff** → `workflows/handoff.md`
 
 Do not skip steps. If a step reveals that an earlier step was incomplete, return to it.
 If research invalidates the architecture, return to step 3. If requirements change mid-implementation, return to step 1.
+If implementation gets stuck in a repeated failure loop, do not keep iterating silently — return to step 2 (Research) or step 3 (Architecture) via `workflows/troubleshooting.md`, or escalate to the user.
+
+## Escalation Protocol (Avoiding Loops)
+
+Complex problems can trigger repeated, near-identical fix attempts that burn effort without progress. Treat this as a hard circuit breaker, not a suggestion:
+
+- **1st failure** on a given problem: fix it directly if the cause is clear.
+- **2nd consecutive failure on the same problem**: stop. Do not try a third variation from memory. Switch to `workflows/troubleshooting.md` — search the web for the exact error/symptom, re-check assumptions, and consider that the design (not the code) may be wrong.
+- **Still unresolved after following troubleshooting.md**: do not keep looping. Document the blocker in `PROJECT_STATE.md` (Troubleshooting Log) with what was tried and why it failed, then present the user with concrete options rather than continuing to iterate silently.
+
+This applies at every phase — a stuck architecture decision, a flaky test, or a recurring bug all qualify.
 
 ## Git Requirements
 

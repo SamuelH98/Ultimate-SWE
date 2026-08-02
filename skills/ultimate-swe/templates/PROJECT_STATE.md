@@ -62,6 +62,17 @@
 
 ---
 
+## Troubleshooting Log
+<!-- One entry per problem that survived 2+ fix attempts (see workflows/troubleshooting.md). Delete the placeholder if none exist yet. -->
+
+### Problem: <short description>
+- **Attempts tried:**
+- **Sources checked (web/docs):**
+- **Current hypothesis:**
+- **Status:** open / escalated to user / resolved (how)
+
+---
+
 ## Resume Instructions
 
 <!--
